@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import Filtros from './components/Filtros/Filtros.js'
 
 function App() {
 
@@ -11,6 +12,9 @@ function App() {
       <header>
 
       </header>
+      
+      <Filtros/>
+
     </div>
   );
 }
