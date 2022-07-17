@@ -6,30 +6,31 @@ function Filtros () {
     return (
         <Sessao>
             
-            <h1>Filtros</h1>
+            <h1>Busca avançada</h1>
             
-            <div>
-                <label>
-                    Valor Minímo:
-                    <input />
-                </label>
-            </div>
-
-            <div>
-                <label>
-                    Valor Máximo:
-                    <input />
-                </label>
-            </div>
-
-            <div>
-
-                <label>
-                    Busca por nome:
-                    <input />
-                </label>
-
-            </div>
+            <form action="">
+                <div>
+                    <label>
+                        Menor preço:
+                        <input  type="number" value={''} onChange={''}/>
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        Maior preço:
+                        <input type="number" value={''} onChange={''}/>
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        Buscar por nome:
+                        <input type="text" value={''} onChange={''}/>
+                    </label>
+                </div>
+                
+                <button type="submit" onClick="submit">Filtrar</button>
+            
+            </form>
 
 
         </Sessao>
