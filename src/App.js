@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import LProdutos from "./components/LProdutos"
+import Filtros from './components/Filtros/Filtros.js'
 
 function App() {
 
@@ -12,6 +13,9 @@ function App() {
       <LProdutos />
       ...
       ...
+          
+      <Filtros/> 
+
     </div>
   );
 }

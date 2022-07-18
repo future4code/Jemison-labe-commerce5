@@ -1,4 +1,4 @@
-import React from 'react';
+/*import React from 'react';
 import {Sessao} from './FiltrosStyled.js';
 
 function Filtros () {
@@ -6,6 +6,18 @@ function Filtros () {
     return (
         <Sessao>
             
+import {produtos} from '../../mockDados'
+
+
+function Filtros () {
+
+    const MaiorValor = produtos.reduce(function(valor,index){
+        return valor.value > index.value ? valor : index;
+    })
+
+    return (
+        <Sessao>
+            <h1>{MaiorValor}</h1>
             <h1>Busca avançada</h1>
             
             <form action="">
@@ -36,4 +48,4 @@ function Filtros () {
         </Sessao>
 )}
 
-export default Filtros;
+export default Filtros;*/
