@@ -1,6 +1,13 @@
-import React from 'react';
+/*import React from 'react';
 import {Sessao} from './FiltrosStyled.js';
+
+function Filtros () {
+
+    return (
+        <Sessao>
+            
 import {produtos} from '../../mockDados'
+
 
 function Filtros () {
 
@@ -41,4 +48,4 @@ function Filtros () {
         </Sessao>
 )}
 
-export default Filtros;
+export default Filtros;*/
