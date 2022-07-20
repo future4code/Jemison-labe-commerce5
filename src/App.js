@@ -1,22 +1,36 @@
-import React from 'react';
-import './App.css';
-import LProdutos from "./components/LProdutos"
+import React, {useState} from 'react';
+import './AppStyled.js';
 import Filtros from './components/Filtros/Filtros.js'
+import Produtos from './Produtos.json'
+import {Card} from './components/Produtos/Card'
+import {ProdutosContainer} from './components/Produtos/CardStyled'
+import {Header} from './components/Header'
+import {AppStyled} from  './AppStyled'
+import './App.css'
 
 function App() {
 
+  const [filtro, setFiltro] = useState('')
+  const [produtos] = useState(Produtos)
 
   return (
-    
-    <div>
 
-      <LProdutos />
-      ...
-      ...
-          
-      <Filtros/> 
+    <AppStyled>
 
-    </div>
+      <Header/>
+      
+      <Filtros
+        filtro={filtro}
+        setFiltro={setFiltro}
+      />
+
+      <ProdutosContainer>
+        {produtos.map(produto => {
+          return <Card key={produto.id} produto={produto} /> 
+        })}
+      </ProdutosContainer>
+      
+    </AppStyled>
   );
 }
 
