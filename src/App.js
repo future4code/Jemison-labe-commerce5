@@ -22,7 +22,6 @@ function App() {
       <Filtros
         filtro={filtro}
         setFiltro={setFiltro}
-
       />
 
       <ProdutosContainer>

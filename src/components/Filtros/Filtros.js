@@ -4,8 +4,6 @@ import {FiltrosContainer} from './FiltrosStyled.js';
 
 function Filtros (props) {
 
-    
-
     return (
         <FiltrosContainer>
             <h3>Buscar:</h3>
