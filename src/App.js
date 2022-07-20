@@ -1,7 +1,8 @@
 import React from 'react';
 import './App.css';
-import LProdutos from "./components/LProdutos"
-import Filtros from './components/Filtros/Filtros.js'
+import LProdutos from "./components/LProdutos";
+import { produtos } from "./mockDados";
+
 
 function App() {
 
@@ -10,11 +11,12 @@ function App() {
     
     <div>
 
-      <LProdutos />
+     
+
+      <LProdutos myProdutos={produtos}/>
       ...
       ...
           
-      <Filtros/> 
 
     </div>
   );
