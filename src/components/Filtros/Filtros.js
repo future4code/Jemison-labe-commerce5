@@ -11,7 +11,8 @@ function Filtros (props) {
             <h3>Buscar:</h3>
             
               
-            <input  
+            <input
+                type="text"
                 placeholder='Pesquisar'
                 value={props.filtro} 
                 onChange={(ev) => {props.setFiltro(ev.target.value)}}

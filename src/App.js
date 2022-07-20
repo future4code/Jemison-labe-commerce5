@@ -10,8 +10,8 @@ import './App.css'
 
 function App() {
 
-  const [filtro, setFiltro] = useState('')
   const [produtos] = useState(Produtos)
+  const [filtro, setFiltro] = useState('')
 
   return (
 
@@ -26,7 +26,11 @@ function App() {
       />
 
       <ProdutosContainer>
-        {produtos.map(produto => {
+        {produtos
+          .filter(produto =>{
+            return produto.name.toLowerCase().includes(filtro.toLowerCase()) 
+          })
+          .map(produto => {
           return <Card key={produto.id} produto={produto} /> 
         })}
       </ProdutosContainer>
