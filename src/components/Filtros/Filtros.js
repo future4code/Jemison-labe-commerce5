@@ -1,41 +1,31 @@
 import React from 'react';
-import {Sessao} from './FiltrosStyled.js';
+import {FiltrosContainer} from './FiltrosStyled.js';
 
 
-function Filtros () {
+function Filtros (props) {
 
     
 
     return (
-        <Sessao>
-            <h1>Busca avançada</h1>
+        <FiltrosContainer>
+            <h3>Buscar:</h3>
             
-            <form action="">
-                <div>
-                    <label>
-                        Menor preço:
-                        <input  type="number" value={''} onChange={''}/>
-                    </label>
-                </div>
-                <div>
-                    <label>
-                        Maior preço:
-                        <input type="number" value={''} onChange={''}/>
-                    </label>
-                </div>
-                <div>
-                    <label>
-                        Buscar por nome:
-                        <input type="text" value={''} onChange={''}/>
-                    </label>
-                </div>
-                
-                <button type="submit" onClick="submit">Filtrar</button>
+              
+            <input  
+                placeholder='Pesquisar'
+                value={props.filtro} 
+                onChange={(ev) => {props.setFiltro(ev.target.value)}}
+            />
+        
             
-            </form>
+            {/* <input type="number" value={''} onChange={''}/>
+        
+    
+            
+            <input type="text" value={''} onChange={''}/> */}
+        
 
-
-        </Sessao>
+        </FiltrosContainer>
 )}
 
 export default Filtros;
