@@ -1,4 +1,3 @@
-
 import React, {useState} from 'react';
 import './AppStyled.js';
 import Filtros from './components/Filtros/Filtros.js'
@@ -16,6 +15,7 @@ function App() {
   const [filtro, setFiltro] = useState('')
   const [precoMinimo, setPrecoMinimo] = useState(-Infinity)
   const [precoMaximo, setPrecoMaximo] = useState(Infinity)
+  const [ordenar, setOrdenar] = useState("name")
 
   const lowerBusca = filtro.toLowerCase()
 
@@ -36,6 +36,8 @@ function App() {
         precoMaximo={precoMaximo}
         setPrecoMaximo={setPrecoMaximo}
 
+        ordenar={ordenar}
+        setOrdenar={setOrdenar}
       />
 
       <ProdutosContainer>
@@ -49,7 +51,17 @@ function App() {
           .filter(produto =>{
             return produto.value <= precoMaximo || precoMaximo === ""
           })
-          .map(produto => {
+          .sort((produtoAtual, proximoProduto) =>{
+            switch (ordenar) {
+              case "value":
+                return produtoAtual.value - proximoProduto.value
+              case "name":
+                return produtoAtual.name.localeCompare(proximoProduto.name)
+              default:
+                return produtoAtual.name
+              }
+          })
+          .map(produto =>{
           return <Card key={produto.id} produto={produto} /> 
         })}
       </ProdutosContainer>
