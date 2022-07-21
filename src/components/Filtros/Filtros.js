@@ -1,5 +1,5 @@
 import React from 'react';
-import {FiltrosContainer} from './FiltrosStyled.js';
+import {FiltrosContainer, OrdenarContainer} from './FiltrosStyled.js';
 
 
 function Filtros (props) {
@@ -27,13 +27,27 @@ function Filtros (props) {
         
     
             
-            <input 
+            <input
+                className="Preco"
                 type="number"
                 placeholder='Preço máximo' 
                 value={props.precoMaximo} 
                 onChange={(ev) => {props.setPrecoMaximo(ev.target.value)}}
             />
         
+            <OrdenarContainer>
+                <label for="ordenar">
+                    Ordenar por:
+                    <select
+                        name="ordenar"
+                        value={props.ordenar}
+                        onChange={(ev) =>{props.setOrdenar(ev.target.value)}}
+                    >
+                        <option value={"name"}>Nome</option>
+                        <option value={"value"}>Preço</option>
+                    </select>
+                </label>
+            </OrdenarContainer>
 
         </FiltrosContainer>
 )}
