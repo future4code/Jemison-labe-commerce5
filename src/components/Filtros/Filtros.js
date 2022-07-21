@@ -19,11 +19,22 @@ function Filtros (props) {
             />
         
             
-            {/* <input type="number" value={''} onChange={''}/>
+            <input
+                className="Preco"
+                type="number" 
+                placeholder='Preço mínimo'
+                value={props.precoMinimo} 
+                onChange={(ev) => {props.setPrecoMinimo(ev.target.value)}}
+            />
         
     
             
-            <input type="text" value={''} onChange={''}/> */}
+            <input 
+                type="number"
+                placeholder='Preço máximo' 
+                value={props.precoMaximo} 
+                onChange={(ev) => {props.setPrecoMaximo(ev.target.value)}}
+            />
         
 
         </FiltrosContainer>
