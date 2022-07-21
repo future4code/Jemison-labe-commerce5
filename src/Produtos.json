@@ -1,7 +1,7 @@
 
 
 [
-    {"id":0, "name":"KX2000", "value": 554, "imagemUrl":"https://www.brinquedosraros.com.br//img_675/nave-espacial-kx-2000-com-4000-cm-de-comprimento-controle-remoto-via-radio-deca-1387849764.jpg"}
+    {"id":0, "name":"KX2000", "value": 554, "imagemUrl":"https://www.brinquedosraros.com.br//img_675/nave-espacial-kx-2000-com-4000-cm-de-comprimento-controle-remoto-via-radio-deca-1387849764.jpg"},
 
     {"id":1, "name":"Trator Espacial", "value": 345, "imagemUrl":"https://www.brinquedosraros.com.br//img_675/E_20027221018.jpg"},
 
@@ -23,7 +23,7 @@
 
     {"id":10, "name":"Space Ray Gun", "value": 315, "imagemUrl":"https://www.brinquedosraros.com.br//img_675/pistola-espacial-space-ray-gun-decada-de-1970-1553724922.jpg"},
 
-    {"id":11, "name":"Ray Gun", "value": 156, "imagemUrl":"https://www.brinquedosraros.com.br//img_675/pistola-espacial-com-faiscas-lazer-ray-gun-decada-de-1980-1553724695.jpg"},
+    {"id":11, "name":"Ray Gun", "value": 156, "imagemUrl":"https://www.brinquedosraros.com.br//img_675/pistola-espacial-com-faiscas-lazer-ray-gun-decada-de-1980-1553724695.jpg"}
 
    
 ]

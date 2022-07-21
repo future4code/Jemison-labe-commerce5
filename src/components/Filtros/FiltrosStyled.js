@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const FiltrosContainer = styled.div `
     display: flex;
-    align-items: center ;
+    align-items: center;
     width: 98%;
     height: 100%;
     padding: 10px;
