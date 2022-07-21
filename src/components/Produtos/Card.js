@@ -1,5 +1,5 @@
 import React from 'react';
-import {CardProduto} from './CardStyled.js'
+import {CardProduto, CardButton} from './CardStyled.js'
 
 
 export function Card (props) {
@@ -8,7 +8,9 @@ export function Card (props) {
             <img className="imagem" src={props.produto.imagemUrl} alt={props.produto.name}/>
             <h3>{props.produto.name}</h3>
             <p>R${props.produto.value},00</p>
-            <button>Adicionar ao carrinho</button>
+            <CardButton>
+                <button>Adicionar ao carrinho</button>
+            </CardButton>
         </CardProduto>
     )
 }
