@@ -12,8 +12,12 @@ import './App.css'
 
 function App() {
 
-  const [filtro, setFiltro] = useState('')
   const [produtos] = useState(Produtos)
+  const [filtro, setFiltro] = useState('')
+  const [precoMinimo, setPrecoMinimo] = useState(-Infinity)
+  const [precoMaximo, setPrecoMaximo] = useState(Infinity)
+
+  const lowerBusca = filtro.toLowerCase()
 
   return (
 
@@ -25,10 +29,27 @@ function App() {
       <Filtros
         filtro={filtro}
         setFiltro={setFiltro}
+
+        precoMinimo={precoMinimo}
+        setPrecoMinimo={setPrecoMinimo}
+
+        precoMaximo={precoMaximo}
+        setPrecoMaximo={setPrecoMaximo}
+
       />
 
       <ProdutosContainer>
-        {produtos.map(produto => {
+        {produtos
+          .filter(produto =>{
+            return produto.name.toLowerCase().includes(lowerBusca) 
+          })
+          .filter(produto =>{
+            return produto.value >= precoMinimo || precoMinimo === ""
+          })
+          .filter(produto =>{
+            return produto.value <= precoMaximo || precoMaximo === ""
+          })
+          .map(produto => {
           return <Card key={produto.id} produto={produto} /> 
         })}
       </ProdutosContainer>
