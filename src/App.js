@@ -16,7 +16,6 @@ function App() {
   const [precoMinimo, setPrecoMinimo] = useState(-Infinity)
   const [precoMaximo, setPrecoMaximo] = useState(Infinity)
   const [ordenar, setOrdenar] = useState("name")
-
   const lowerBusca = filtro.toLowerCase()
 
   return (
@@ -62,7 +61,7 @@ function App() {
               }
           })
           .map(produto =>{
-          return <Card key={produto.id} produto={produto} /> 
+          return <Card key={produto.id} produto={produto}/> 
         })}
       </ProdutosContainer>
       
