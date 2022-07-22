@@ -21,8 +21,8 @@ export function Header () {
 
         <HeaderContainer>
             
-            <h1>Brinquedos e Produtos infantis temáticos</h1>
-            
+            <h1>Brinquedos e Produtos Infantis</h1>
+                        
         </HeaderContainer>
     )
 }
