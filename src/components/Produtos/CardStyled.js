@@ -27,7 +27,7 @@ export const CardProduto = styled.div `
     padding: 10px;
     margin: 10px 10px;
     border-radius: 10px ;
-    background-color: lightblue;
+    background-color: white;
 
     .imagem{
         width: 80%;
