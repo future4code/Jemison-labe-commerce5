@@ -1,4 +1,5 @@
 import React from 'react';
+import { Carrinho } from '../Carrinho/Carrinho.js';
 import {FiltrosContainer, OrdenarContainer} from './FiltrosStyled.js';
 
 
@@ -34,7 +35,7 @@ function Filtros (props) {
                 value={props.precoMaximo} 
                 onChange={(ev) => {props.setPrecoMaximo(ev.target.value)}}
             />
-        
+            <Carrinho />
             <OrdenarContainer>
                 <label for="ordenar">
                     Ordenar por:
