@@ -2,6 +2,6 @@ import styled from 'styled-components';
 
 export const AppStyled = styled.div `
     height: 100% ;
-    background-color: rgb(43,28,255);
+    background-color: rgb(153,207,255);
     margin: 0;
 `
