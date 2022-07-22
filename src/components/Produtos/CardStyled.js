@@ -11,11 +11,6 @@ export const ProdutosContainer = styled.div `
 `
 export const CardButton = styled.div`
     margin-top: 10px;
-  
-
-
-
-
 `
 
 
